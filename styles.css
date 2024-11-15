@@ -81,3 +81,11 @@ weather-icon {
   font-size: 28px;
   margin-top: -6px;
 }
+
+.hidden {
+  visibility: hidden; /* Keep space occupied but hide content */
+}
+
+.visible {
+  visibility: visible; /* Show content */
+}
