@@ -7,40 +7,53 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="card">
-      <div class="search">
-        <input
-          type="text"
-          placeholder="Enter City Name"
-          spellcheck="false"
-          list="cities"
-        />
-        <button><img src="images/search.png" class="search-btn" /></button>
-        <div class="loading" style="display: none">Loading...</div>
-        <!-- <div class="weather" style="display: none;">   -->
-      </div>
-      <div class="weather hidden">
-        <img src="images/rain.png" class="weather-icon" />
-        <h1 class="temp">22°C</h1>
-        <h2 class="city-name">Bangalore</h2>
-        <div class="details">
-          <div class="col">
-            <img src="images/humidity.png" />
-            <div>
-              <p class="humidity">50%</p>
-              <p>Humidity</p>
+    <div class="background">
+      <div class="card">
+        <h1>Weather App</h1>
+        <div class="search">
+          <input
+            type="text"
+            placeholder="Enter City Name"
+            spellcheck="false"
+            list="cities"
+          />
+          <button><img src="images/search.png" alt="" /></button>
+        </div>
+        <div class="error">
+          <p>Invalid City Name</p>
+        </div>
+        <datalist id="cities"></datalist>
+        <div class="loading hidden">
+          <div class="spinner"></div>
+          <!-- Loading Spinner -->
+          Loading...
+        </div>
+        <div class="weather hidden">
+          <!-- Initially hidden -->
+          <img src="images/rain.png" class="weather-icon" />
+          <h2 class="city-name">Bangalore</h2>
+          <h1 class="temp">22°C</h1>
+          <div class="details">
+            <div class="col">
+              <img src="images/humidity.png" />
+              <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
             </div>
-          </div>
 
-          <div class="col">
-            <img src="images/wind.png" />
-            <div>
-              <p class="wind">15 km/h</p>
-              <p>Wind Speed</p>
+            <div class="col">
+              <img src="images/wind.png" />
+              <div>
+                <p class="wind">15 km/h</p>
+                <p>Wind Speed</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <datalist id="cities"></datalist>
+      <!-- Datalist for city names -->
     </div>
     <script src="server.js"></script>
   </body>
